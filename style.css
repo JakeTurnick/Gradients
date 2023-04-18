@@ -38,6 +38,24 @@ body {
     height: 80%; */
 }
 
+.gradient-border {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.gradient-block {
+    background-color: black;
+    color: white;
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    text-align: center;
+    padding: 1rem;
+}
+
 /* ANIMATIONS */
 
 @keyframes spin {
@@ -100,8 +118,8 @@ body {
     width: 300%;
     height: 300%;
     position: absolute;
-    left: -150%;
-    top: -50%;
+    left: -160%;
+    top: -60%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -128,4 +146,35 @@ body {
     position: absolute;
     width: 90%;
     height: 90%;
+}
+
+/* Sunrise */
+
+#sunrise {
+    position: absolute;
+    background: radial-gradient(
+        ellipse 100% 66% at 50% 100%,
+        yellow 10%,
+        orange 40%,
+        cyan 80%,
+        blue 125%);
+    width: 200%;
+    aspect-ratio: 1/1;
+    /* transform: translatey(25%); */
+    top: 0%;
+    transition: transform ease 5s;
+}
+
+.gradient-card:hover > .gradient-border > #sunrise {
+
+    /* background-color: wheat; */
+    transform: translateY(-33%);
+}
+
+#sunrise-border {
+    position: relative;
+    height: 80%;
+    width: 80%;
+    border: 2px solid black;
+    overflow: hidden;
 }
