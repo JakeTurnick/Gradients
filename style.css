@@ -1,0 +1,65 @@
+* {
+    color: whitesmoke;
+}
+
+body {
+    /* width: 100vw;
+    height: 100vh; */
+    padding: 2rem;
+    background-color: #000000;
+}
+
+#card-container {
+    width: 100%;
+    height: 100%;
+}
+
+.gradient-card {
+    width: 500px;
+    height: 500px;
+    background-color: #00bbaa;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.gradient {
+    content: "  ";
+    width: 80%;
+    height: 80%;
+}
+
+#color-wheel {
+    background: conic-gradient(red, orange, yellow, green, blue, purple, red);
+    /* content: " "; */
+    animation: spin 20s linear 0s infinite normal;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg)
+    }
+    to {
+        transform: rotate(360deg);
+    }
+    
+}
+
+#color-wheel-blocking {
+    position: absolute;
+    background-color: wheat;
+    width: 250px;
+    height: 250px;
+    top: 275px;
+}
+
+#color-wheel-border {
+    position: absolute;
+    background-color: #00000000;
+    border: 2px solid wheat;
+    width: 300px;
+    height: 300px;
+    top: 250px;
+}
