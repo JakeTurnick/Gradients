@@ -16,13 +16,14 @@ body {
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     flex-wrap: wrap;
 }
 
 .gradient-card {
     width: 500px;
     height: 500px;
+    margin: 1rem;
     background-color: #00bbaa;
     position: relative;
     display: flex;
@@ -42,6 +43,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 90%;
+    height: 90%;
 }
 
 .gradient-block {
@@ -152,17 +155,18 @@ body {
         ellipse 100% 66% at 50% 100%,
         yellow 10%,
         orange 40%,
-        cyan 70%,
-        blue 140%);
+        cyan 60%,
+        blue 120%,
+        #000399 140%);
     width: 200%;
     aspect-ratio: 1/1;
     top: 0%;
-    transition: transform ease 4s;
+    transition: transform ease 3s;
 }
-
+/* .gradient-card:hover > */
 /* On maint parent hover -> translate sunrise gradient div */
-.gradient-card:hover > .gradient-border > #sunrise {
-    transform: translateY(-33%);
+ .gradient-border:hover > #sunrise {
+    transform: translateY(-50%);
 }
 
 #sunrise-border {
@@ -172,3 +176,46 @@ body {
     border: 2px solid black;
     overflow: hidden;
 }
+
+/* Dot-matrix */
+
+#dot-matrix {
+    border: 2px solid black;
+    width: 90%;
+    aspect-ratio: 1/1;
+
+    background: repeat radial-gradient(red, blue, green);
+}
+
+/* diag slide */
+
+#diag-slide {
+    border: 4px solid black;
+    width: 90%;
+    aspect-ratio: 1/1;
+    margin: 1rem;
+    place-items: center;
+    position: relative;
+}
+#diag-slide::after {
+    background: linear-gradient(
+        130deg,
+        transparent 0% 33%,
+        #44008b 66%,
+        #af10d7 83.5%,
+        #ffcd05 100%
+    );
+    background-position: 0% 0%;
+    background-size: 100% 100%;
+    content: " ";
+}
+
+/* #diag-slide {
+    background: linear-gradient(
+        130deg,
+        transparent 0% 33%,
+        #44008b 66%,
+        #af10d7 83.5%,
+        #ffcd05 100%
+    );
+} */
