@@ -197,7 +197,7 @@ body {
     place-items: center;
     position: relative;
 }
-#diag-slide::after {
+#diag-slide::before {
     background: linear-gradient(
         130deg,
         transparent 0% 33%,
@@ -206,8 +206,18 @@ body {
         #ffcd05 100%
     );
     background-position: 0% 0%;
-    background-size: 100% 100%;
-    content: " ";
+    background-size: 300% 300%;
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transition: background-position ease 1s;
+}
+
+#diag-slide:hover:before {
+    background-position: 100% 100%;
 }
 
 /* #diag-slide {
@@ -217,5 +227,5 @@ body {
         #44008b 66%,
         #af10d7 83.5%,
         #ffcd05 100%
-    );
+    ); 
 } */
